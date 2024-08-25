@@ -7,12 +7,18 @@ export function Navbar() {
     <nav className="nav-container">
       <ul>
         <li>
-          <NavLink to="/" className="navLink">
+          <NavLink
+            to="/"
+            className={(isActive) => `navLink ${isActive.isActive ? "isActiveNav" : ""}`}
+          >
             Form
           </NavLink>
         </li>
         <li>
-          <NavLink to="/checkboxTry" className="navLink">
+          <NavLink
+            to="/checkboxTry"
+            className={(isActive) => `navLink ${isActive.isActive ? "isActiveNav" : ""}`}
+          >
             Checkbox Try
           </NavLink>
         </li>

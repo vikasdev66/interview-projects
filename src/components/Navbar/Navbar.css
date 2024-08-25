@@ -15,6 +15,11 @@
   margin: 0 10px 0 10px;
 }
 
-.nav-container ul li .navLink{
-    text-decoration: none;
+.isActiveNav {
+  border-bottom: 3px solid rgb(130, 106, 251);
+  color: rgb(130, 106, 251);
+}
+
+.nav-container ul li .navLink {
+  text-decoration: none;
 }
