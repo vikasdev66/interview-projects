@@ -22,6 +22,14 @@ export function Navbar() {
             Checkbox Try
           </NavLink>
         </li>
+        <li>
+          <NavLink
+            to="/stopwatch"
+            className={(isActive) => `navLink ${isActive.isActive ? "isActiveNav" : ""}`}
+          >
+            Stopwatch
+          </NavLink>
+        </li>
       </ul>
     </nav>
   );

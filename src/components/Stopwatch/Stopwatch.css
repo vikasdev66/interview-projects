@@ -1,0 +1,15 @@
+.stopwatch-btn-container{
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.stopwatch-btn-container button {
+  padding: 0.5rem 3.125rem;
+  text-align: center;
+  background-color: #3498db;
+  border: none;
+  border-radius: 0.3125rem;
+  box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
