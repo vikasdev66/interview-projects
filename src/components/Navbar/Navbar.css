@@ -5,6 +5,8 @@
   border-color: gray;
   height: 50px;
   margin-bottom: 20px;
+  justify-content: space-between;
+  padding: 0 10px 0 10px;
 }
 
 .nav-container ul {
@@ -12,7 +14,6 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  margin: 0 10px 0 10px;
 }
 
 .isActiveNav {
@@ -22,4 +23,9 @@
 
 .nav-container ul li .navLink {
   text-decoration: none;
+}
+
+.nav-container span a {
+  text-decoration: underline;
+  color: blue;
 }

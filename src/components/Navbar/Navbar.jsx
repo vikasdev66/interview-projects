@@ -9,7 +9,9 @@ export function Navbar() {
         <li>
           <NavLink
             to="/"
-            className={(isActive) => `navLink ${isActive.isActive ? "isActiveNav" : ""}`}
+            className={(isActive) =>
+              `navLink ${isActive.isActive ? "isActiveNav" : ""}`
+            }
           >
             Form
           </NavLink>
@@ -17,7 +19,9 @@ export function Navbar() {
         <li>
           <NavLink
             to="/checkboxTry"
-            className={(isActive) => `navLink ${isActive.isActive ? "isActiveNav" : ""}`}
+            className={(isActive) =>
+              `navLink ${isActive.isActive ? "isActiveNav" : ""}`
+            }
           >
             Checkbox Try
           </NavLink>
@@ -25,12 +29,22 @@ export function Navbar() {
         <li>
           <NavLink
             to="/stopwatch"
-            className={(isActive) => `navLink ${isActive.isActive ? "isActiveNav" : ""}`}
+            className={(isActive) =>
+              `navLink ${isActive.isActive ? "isActiveNav" : ""}`
+            }
           >
             Stopwatch
           </NavLink>
         </li>
       </ul>
+      <span>
+        <a
+          href="https://github.com/vikasdev66/interview-projects.git"
+          target="_blank" rel="noreferrer"
+        >
+          Github Link
+        </a>
+      </span>
     </nav>
   );
 }
