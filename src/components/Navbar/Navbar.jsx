@@ -92,6 +92,19 @@ export function Navbar() {
               Stopwatch
             </NavLink>
           </li>
+          {showMediaIcons ? (
+            <li>
+              <a
+                href="https://github.com/vikasdev66/interview-projects.git"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaGithubSquare className="social-media-icon" />
+              </a>
+            </li>
+          ) : (
+            ""
+          )}
         </ul>
       </div>
       <div className="social-media">
