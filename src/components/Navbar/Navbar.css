@@ -78,7 +78,6 @@ li {
 
 @media (max-width: 1080px) {
   .main-nav {
-    height: 3rem;
     grid-template-columns: 2rem 3fr 3fr 1fr 2rem;
   }
 }
