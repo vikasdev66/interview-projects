@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaGithubSquare } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { RiNotionFill } from "react-icons/ri";
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 
@@ -58,13 +59,22 @@ export function Navbar() {
           </li>
           {showMediaIcons ? (
             <li className="mobile-social-link">
-              <a
-                href="https://github.com/vikasdev66/interview-projects.git"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaGithubSquare className="social-media-icon" />
-              </a>
+              <div className="mobile-social-link-div">
+                <a
+                  href="https://github.com/vikasdev66/interview-projects.git"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaGithubSquare className="social-media-icon" />
+                </a>
+                <a
+                  href="https://light-bubbler-736.notion.site/Interview-Preparation-8cf5bc808f58470481cf004e6005f006?pvs=74"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <RiNotionFill className="social-media-icon" />
+                </a>
+              </div>
             </li>
           ) : (
             ""
@@ -80,6 +90,15 @@ export function Navbar() {
               rel="noopener noreferrer"
             >
               <FaGithubSquare className="social-media-icon" />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://light-bubbler-736.notion.site/Interview-Preparation-8cf5bc808f58470481cf004e6005f006?pvs=74"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <RiNotionFill className="social-media-icon" />
             </a>
           </li>
         </ul>
