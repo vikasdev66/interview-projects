@@ -1,4 +1,4 @@
-import { FormTry, CheckboxTry, Stopwatch } from "./components/index";
+import { Home, FormTry, CheckboxTry, Stopwatch } from "./components/index";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Layout from "./Layout";
 import "./App.css";
@@ -8,7 +8,8 @@ const router = createBrowserRouter([
     path: "/",
     element: <Layout />,
     children: [
-      { path: "/", element: <FormTry /> },
+      { path: "/", element: <Home /> },
+      { path: "/form", element: <FormTry /> },
       { path: "/checkboxTry", element: <CheckboxTry /> },
       { path: "/stopwatch", element: <Stopwatch /> },
     ],

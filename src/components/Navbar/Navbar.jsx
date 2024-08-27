@@ -4,53 +4,6 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 
-// export function Navbar() {
-//   return (
-//     <nav className="nav-container">
-//       <ul>
-//         <li>
-//           <NavLink
-//             to="/"
-//             className={(isActive) =>
-//               `navLink ${isActive.isActive ? "isActiveNav" : ""}`
-//             }
-//           >
-//             Form
-//           </NavLink>
-//         </li>
-//         <li>
-//           <NavLink
-//             to="/checkboxTry"
-//             className={(isActive) =>
-//               `navLink ${isActive.isActive ? "isActiveNav" : ""}`
-//             }
-//           >
-//             Checkbox Try
-//           </NavLink>
-//         </li>
-//         <li>
-//           <NavLink
-//             to="/stopwatch"
-//             className={(isActive) =>
-//               `navLink ${isActive.isActive ? "isActiveNav" : ""}`
-//             }
-//           >
-//             Stopwatch
-//           </NavLink>
-//         </li>
-//       </ul>
-//       <span>
-//         <a
-//           href="https://github.com/vikasdev66/interview-projects.git"
-//           target="_blank" rel="noreferrer"
-//         >
-//           Github Link
-//         </a>
-//       </span>
-//     </nav>
-//   );
-// }
-
 export function Navbar() {
   const [showMediaIcons, setShowMediaIcons] = useState(false);
   return (
@@ -65,6 +18,17 @@ export function Navbar() {
           <li>
             <NavLink
               to="/"
+              className={(isActive) =>
+                `${isActive.isActive ? "isActiveNav" : ""} navLink`
+              }
+              state="Welcome to Interview Projects"
+            >
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/form"
               className={(isActive) =>
                 `${isActive.isActive ? "isActiveNav" : ""} navLink`
               }
