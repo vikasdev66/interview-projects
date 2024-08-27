@@ -82,7 +82,7 @@ export function Navbar() {
         </ul>
       </div>
       <div className="social-media">
-        <ul className="social-media-desktop">
+        <ul className="social-media-desktop gap-4">
           <li>
             <a
               href="https://github.com/vikasdev66/interview-projects.git"
