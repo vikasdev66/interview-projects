@@ -93,7 +93,7 @@ export function Navbar() {
             </NavLink>
           </li>
           {showMediaIcons ? (
-            <li>
+            <li className="mobile-social-link">
               <a
                 href="https://github.com/vikasdev66/interview-projects.git"
                 target="_blank"
