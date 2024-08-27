@@ -123,7 +123,9 @@ export function Navbar() {
       <div className="hamburger-menu">
         <div className="hamburger-menu-container">
           <GiHamburgerMenu
-            className="hamburger-menu-icon"
+            className={`hamburger-menu-icon ${
+              showMediaIcons ? "rotate-90" : ""
+            }`}
             onClick={() => {
               setShowMediaIcons(!showMediaIcons);
             }}

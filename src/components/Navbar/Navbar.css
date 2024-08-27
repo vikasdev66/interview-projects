@@ -88,6 +88,7 @@ li {
 
 .hamburger-menu-icon {
   cursor: pointer;
+  transition: 0.2s;
 }
 
 @media (max-width: 998px) {
