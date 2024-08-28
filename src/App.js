@@ -4,6 +4,7 @@ import {
   CheckboxTry,
   Stopwatch,
   TodoList,
+  Accordion,
 } from "./components/index";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Layout from "./Layout";
@@ -19,6 +20,7 @@ const router = createBrowserRouter([
       { path: "/checkboxTry", element: <CheckboxTry /> },
       { path: "/stopwatch", element: <Stopwatch /> },
       { path: "/todoList", element: <TodoList /> },
+      { path: "/accordion", element: <Accordion /> },
     ],
   },
 ]);

@@ -1,0 +1,22 @@
+.Accordion-item {
+  border-bottom: 2px solid black;
+}
+
+.arrowForward-icon {
+  padding: 0;
+  margin-top: 5px;
+  width: 90px;
+  transition: 0.5s;
+}
+
+.arrowForward-icon-rotate {
+  transform: rotate(45deg);
+}
+
+.accordion-none {
+  display: none;
+}
+
+.accordion-block {
+  display: block;
+}

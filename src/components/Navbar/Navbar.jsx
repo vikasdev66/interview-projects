@@ -69,6 +69,16 @@ export function Navbar() {
               Todo List
             </NavLink>
           </li>
+          <li>
+            <NavLink
+              to="/accordion"
+              className={(isActive) =>
+                `${isActive.isActive ? "isActiveNav" : ""} navLink`
+              }
+            >
+              Accordion
+            </NavLink>
+          </li>
           {showMediaIcons ? (
             <li className="mobile-social-link">
               <div className="mobile-social-link-div">
