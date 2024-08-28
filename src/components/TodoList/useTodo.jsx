@@ -49,18 +49,8 @@ export const useTodo = () => {
   };
 
   useEffect(() => {
-    setTodoList(
-      JSON.parse(
-        localStorage.getItem("todo") ? localStorage.getItem("todo") : []
-      )
-    );
-    setCheckedItems(
-      JSON.parse(
-        localStorage.getItem("checkedItems")
-          ? localStorage.getItem("checkedItems")
-          : []
-      )
-    );
+    setTodoList(JSON.parse(localStorage.getItem("todo")) || []);
+    setCheckedItems(JSON.parse(localStorage.getItem("checkedItems")) || []);
   }, []);
   return {
     Form,
