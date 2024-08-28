@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Form } from "antd";
 
 export const useTodo = () => {
@@ -49,8 +49,18 @@ export const useTodo = () => {
   };
 
   useEffect(() => {
-    setTodoList(JSON.parse(localStorage.getItem("todo")));
-    setCheckedItems(JSON.parse(localStorage.getItem("checkedItems")));
+    setTodoList(
+      JSON.parse(
+        localStorage.getItem("todo") ? localStorage.getItem("todo") : []
+      )
+    );
+    setCheckedItems(
+      JSON.parse(
+        localStorage.getItem("checkedItems")
+          ? localStorage.getItem("checkedItems")
+          : []
+      )
+    );
   }, []);
   return {
     Form,
