@@ -40,23 +40,25 @@ export function CheckboxTry() {
   };
   return (
     <div className="main-container">
-      <div className="container flex justify-around">
-        <div className="checkboxTry-container">
-          <h3>Normal Checkbox Play</h3>
-          <NormalCheckboxPlay
-            names={names}
-            checkedIds={checkedIds}
-            handleAllChange={handleAllChange}
-            handleChange={handleChange}
-          />
-        </div>
-        <div className="checkboxTry-container">
-          <h3>EventDelegation</h3>
-          <EventDelegation
-            names={names}
-            checkedIds={checkedIds}
-            handleDivClick={handleDivClick}
-          />
+      <div className="container">
+        <div className="checkbox-container">
+          <div className="checkboxTry-container">
+            <h3>Normal Checkbox Play</h3>
+            <NormalCheckboxPlay
+              names={names}
+              checkedIds={checkedIds}
+              handleAllChange={handleAllChange}
+              handleChange={handleChange}
+            />
+          </div>
+          <div className="checkboxTry-container">
+            <h3>EventDelegation</h3>
+            <EventDelegation
+              names={names}
+              checkedIds={checkedIds}
+              handleDivClick={handleDivClick}
+            />
+          </div>
         </div>
       </div>
     </div>
