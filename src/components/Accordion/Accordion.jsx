@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { IoIosArrowForward } from "react-icons/io";
 import { accordionData } from "./accordionData";
 import "./Accordion.css";
 
@@ -17,14 +16,16 @@ export function Accordion() {
             return (
               <div key={index} className="Accordion-item">
                 <div className="flex">
-                  <IoIosArrowForward
+                  <span
                     onClick={() => {
                       setOpenIndex(openIndex === index ? null : index);
                     }}
                     className={`${
                       isAccordion ? "arrowForward-icon-rotate" : ""
                     } arrowForward-icon cursor-pointer`}
-                  />
+                  >
+                    {">"}
+                  </span>
                   <div>
                     <div
                       onClick={() => {
