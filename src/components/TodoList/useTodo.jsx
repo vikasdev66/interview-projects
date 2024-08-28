@@ -45,7 +45,7 @@ export const useTodo = () => {
   };
 
   const validateTodo = (_, value) => {
-    if (todoList.includes(value)) {
+    if (todoList?.includes(value)) {
       return Promise.reject(new Error("This todo already exist"));
     }
     return Promise.resolve();
