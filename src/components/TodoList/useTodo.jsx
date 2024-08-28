@@ -48,9 +48,6 @@ export const useTodo = () => {
     if (todoList.includes(value)) {
       return Promise.reject(new Error("This todo already exist"));
     }
-    if (!value) {
-      return Promise.reject(new Error("Please enter todo"));
-    }
     return Promise.resolve();
   };
 

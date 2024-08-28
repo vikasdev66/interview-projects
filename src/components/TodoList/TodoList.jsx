@@ -22,7 +22,13 @@ export function TodoList() {
       <div className="container">
         <h1 className="text-center">Todo List Using Localstorage</h1>
         <Form onFinish={handleSubmit} form={form}>
-          <Form.Item rules={[{ validator: validateTodo }]} name="todo">
+          <Form.Item
+            rules={[
+              { required: true, message: "Please enter todo" },
+              { validator: validateTodo },
+            ]}
+            name="todo"
+          >
             <Input
               type="text"
               value={todo}
