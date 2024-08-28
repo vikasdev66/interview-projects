@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FaGithubSquare } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RiNotionFill } from "react-icons/ri";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import "./Navbar.css";
 
 export function Navbar() {
@@ -10,7 +10,9 @@ export function Navbar() {
   return (
     <nav className="main-nav">
       <div className="logo">
-        <h2>Interview Project</h2>
+        <Link to="/" state="Welcome to Interview Projects">
+          <h2>Interview Project</h2>
+        </Link>
       </div>
       <div
         className={showMediaIcons ? "menu-link mobile-menu-link" : "menu-link"}
@@ -22,7 +24,7 @@ export function Navbar() {
               className={(isActive) =>
                 `${isActive.isActive ? "isActiveNav" : ""} navLink`
               }
-              state="Welcome to Interview Projects"
+              state="Passing data using react router dom"
             >
               Home
             </NavLink>
@@ -55,6 +57,16 @@ export function Navbar() {
               }
             >
               Stopwatch
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/todoList"
+              className={(isActive) =>
+                `${isActive.isActive ? "isActiveNav" : ""} navLink`
+              }
+            >
+              Todo List
             </NavLink>
           </li>
           {showMediaIcons ? (

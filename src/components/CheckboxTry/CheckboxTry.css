@@ -1,0 +1,8 @@
+.checkboxTry-container input {
+    margin-right: 10px;
+}
+
+.checkboxTry-container label{
+    display: flex;
+    align-items: center;
+}

@@ -6,8 +6,8 @@ export function Home() {
   return (
     <div className="main-container">
       <div className="container flex flex-col items-center justify-center">
-        <h1>{homeData.state}</h1>
-        <p>Passing data using react router dom</p>
+        <h1>Welcome to Interview Projects</h1>
+        <p>{homeData.state}</p>
       </div>
     </div>
   );

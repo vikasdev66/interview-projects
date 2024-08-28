@@ -2,6 +2,7 @@ import { useState } from "react";
 import EventDelegation from "./EventDelegation.jsx";
 import NormalCheckboxPlay from "./NormalCheckboxPlay.jsx";
 import { names } from "../../data.js";
+import "./CheckboxTry.css";
 
 export function CheckboxTry() {
   const [checkedIds, setCheckedIds] = useState([]);
@@ -39,8 +40,8 @@ export function CheckboxTry() {
   };
   return (
     <div className="main-container">
-      <div className="container">
-        <div>
+      <div className="container flex justify-around">
+        <div className="checkboxTry-container">
           <h3>Normal Checkbox Play</h3>
           <NormalCheckboxPlay
             names={names}
@@ -49,7 +50,7 @@ export function CheckboxTry() {
             handleChange={handleChange}
           />
         </div>
-        <div>
+        <div className="checkboxTry-container">
           <h3>EventDelegation</h3>
           <EventDelegation
             names={names}
