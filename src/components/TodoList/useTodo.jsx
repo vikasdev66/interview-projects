@@ -6,15 +6,13 @@ export const useTodo = () => {
   const [todoList, setTodoList] = useState([]);
   const [checkedItems, setCheckedItems] = useState([]);
   const [form] = Form.useForm();
-  const handleSubmit = (e) => {
+  const handleSubmit = () => {
     try {
       setTodoList((prev) => {
-        console.log(prev);
         const items = [...prev, todo.trim()];
         localStorage.setItem("todo", JSON.stringify(items));
         return items;
       });
-      console.log(todo, e.todo);
       form.resetFields();
       setTodo("");
     } catch (e) {
@@ -37,7 +35,6 @@ export const useTodo = () => {
 
   const handleCheck = (todoItem) => {
     setCheckedItems((prev) => {
-      console.log(prev);
       const items = [...prev, todoItem];
       localStorage.setItem("checkedItems", JSON.stringify(items));
       return items;
