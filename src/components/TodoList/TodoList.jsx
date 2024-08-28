@@ -49,11 +49,13 @@ export function TodoList() {
                 </div>
                 <div className="flex gap-4">
                   <RiDeleteBin5Line
+                    className="cursor-pointer"
                     onClick={() => {
                       handleDelete(todoItem);
                     }}
                   />
                   <FaCheck
+                    className="cursor-pointer"
                     onClick={() => {
                       handleCheck(todoItem);
                     }}
