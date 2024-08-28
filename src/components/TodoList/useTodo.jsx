@@ -16,7 +16,7 @@ export const useTodo = () => {
       form.resetFields();
       setTodo("");
     } catch (e) {
-      throw new Error(e);
+      console.error(e);
     }
   };
 
@@ -29,7 +29,7 @@ export const useTodo = () => {
       localStorage.setItem("todo", JSON.stringify(deletedTodo));
       localStorage.setItem("checkedItems", JSON.stringify(deletedChecked));
     } catch (e) {
-      throw new Error(e);
+      console.error(e);
     }
   };
 
