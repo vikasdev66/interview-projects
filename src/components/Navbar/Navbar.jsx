@@ -11,7 +11,7 @@ export function Navbar() {
     <nav className="main-nav">
       <div className="logo">
         <Link to="/" state="Welcome to Interview Projects">
-          <h2>Interview Project</h2>
+          <h2>React Interview Projects</h2>
         </Link>
       </div>
       <div

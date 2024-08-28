@@ -128,11 +128,11 @@ li {
   }
 
   .mobile-menu-link {
-    grid-column: 2/4;
-    position: relative;
+    position: absolute;
+    width: 80%;
+    top: 75px;
+    left: 72px;
     z-index: 99;
-  }
-  .mobile-menu-link {
     background-color: white;
     height: 15rem;
     display: grid;
