@@ -20,7 +20,7 @@ export function TodoList() {
   return (
     <div className="main-container">
       <div className="container">
-        <h1 className="text-center">Todo List Using Localstorage</h1>
+        <h1 className="text-center">Todo List Using LocalStorage</h1>
         <Form onFinish={handleSubmit} form={form}>
           <Form.Item
             rules={[
