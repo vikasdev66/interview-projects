@@ -4,13 +4,19 @@ import { Form } from "antd";
 export const useTodo = () => {
   const [todo, setTodo] = useState("");
   const [todoList, setTodoList] = useState([]);
-  const [checkedItems, setCheckedItems] = useState([]);
+  const [doneItems, setDoneItems] = useState({});
   const [form] = Form.useForm();
   const handleSubmit = () => {
     try {
       setTodoList((prev) => {
         const items = [...prev, todo.trim()];
         localStorage.setItem("todo", JSON.stringify(items));
+        return items;
+      });
+      setDoneItems((prev) => {
+        const items = { ...prev, [todo.trim()]: false };
+        localStorage.setItem("doneItems", JSON.stringify(items));
+        console.log(items);
         return items;
       });
       form.resetFields();
@@ -23,20 +29,22 @@ export const useTodo = () => {
   const handleDelete = (todoItem) => {
     try {
       const deletedTodo = todoList.filter((item) => item !== todoItem);
-      const deletedChecked = checkedItems.filter((item) => item !== todoItem);
+      const deletedDone = Object.keys(doneItems)
+        .filter((key) => key !== todoItem)
+        .reduce((acc, key) => ({ ...acc, [key]: doneItems[key] }), {});
       setTodoList(deletedTodo);
-      setCheckedItems(deletedChecked);
+      setDoneItems(deletedDone);
       localStorage.setItem("todo", JSON.stringify(deletedTodo));
-      localStorage.setItem("checkedItems", JSON.stringify(deletedChecked));
+      localStorage.setItem("doneItems", JSON.stringify(deletedDone));
     } catch (e) {
       console.error(e);
     }
   };
 
   const handleCheck = (todoItem) => {
-    setCheckedItems((prev) => {
-      const items = [...prev, todoItem];
-      localStorage.setItem("checkedItems", JSON.stringify(items));
+    setDoneItems((prev) => {
+      const items = { ...prev, [todoItem]: !!!doneItems[todoItem] };
+      localStorage.setItem("doneItems", JSON.stringify(items));
       return items;
     });
   };
@@ -50,7 +58,7 @@ export const useTodo = () => {
 
   useEffect(() => {
     setTodoList(JSON.parse(localStorage.getItem("todo")) || []);
-    setCheckedItems(JSON.parse(localStorage.getItem("checkedItems")) || []);
+    setDoneItems(JSON.parse(localStorage.getItem("doneItems")) || {});
   }, []);
   return {
     Form,
@@ -60,7 +68,7 @@ export const useTodo = () => {
     todo,
     setTodo,
     todoList,
-    checkedItems,
+    doneItems,
     handleCheck,
     handleDelete,
   };

@@ -13,7 +13,7 @@ export function TodoList() {
     todo,
     setTodo,
     todoList,
-    checkedItems,
+    doneItems,
     handleCheck,
     handleDelete,
   } = useTodo();
@@ -46,22 +46,20 @@ export function TodoList() {
                 key={index}
                 className="todo-item flex items-center justify-between"
               >
-                <div
-                  className={
-                    checkedItems?.includes(todoItem) ? "line-through" : ""
-                  }
-                >
+                <div className={!!doneItems[todoItem] ? "line-through" : ""}>
                   {todoItem}
                 </div>
                 <div className="flex gap-4">
                   <RiDeleteBin5Line
-                    className="cursor-pointer"
+                    className="cursor-pointer hover:text-red-500"
                     onClick={() => {
                       handleDelete(todoItem);
                     }}
                   />
                   <FaCheck
-                    className="cursor-pointer"
+                    className={`cursor-pointer ${
+                      !!doneItems[todoItem] && "text-green-600"
+                    }`}
                     onClick={() => {
                       handleCheck(todoItem);
                     }}
