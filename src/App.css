@@ -12,13 +12,17 @@ body {
   background-color: rgb(130, 106, 251);
 }
 
-/* .app-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-} */
+.arrowForward-icon {
+  margin-right: 5px;
+  font-size: 20px;
+  transform-origin: center center;
+  transition: 0.5s;
+  block-size: 20px;
+}
+
+.arrowForward-icon-rotate {
+  transform: rotate(45deg);
+}
 
 .container {
   position: relative;
