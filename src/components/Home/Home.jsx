@@ -15,7 +15,7 @@ export function Home() {
           that cover everything from fundamental concepts to advanced
           techniques. Start exploring and boost your React skills today!
         </p>
-        <p className="hidden">{homeData.state}</p>
+        <p className="hidden">{homeData.state?.routeState}</p>
       </div>
     </div>
   );

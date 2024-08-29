@@ -5,6 +5,7 @@ import {
   Stopwatch,
   TodoList,
   Accordion,
+  FileStructure,
 } from "./components/index";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Layout from "./Layout";
@@ -21,6 +22,7 @@ const router = createBrowserRouter([
       { path: "/stopwatch", element: <Stopwatch /> },
       { path: "/todoList", element: <TodoList /> },
       { path: "/accordion", element: <Accordion /> },
+      { path: "/fileStructure", element: <FileStructure /> },
     ],
   },
 ]);

@@ -3,10 +3,14 @@ import { FaGithubSquare } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RiNotionFill } from "react-icons/ri";
 import { NavLink, Link } from "react-router-dom";
+import { NavList } from "./NavList";
 import "./Navbar.css";
 
 export function Navbar() {
   const [showMediaIcons, setShowMediaIcons] = useState(false);
+  const handleShowMedia = () => {
+    setShowMediaIcons(!showMediaIcons);
+  };
   return (
     <nav className="main-nav">
       <div className="logo">
@@ -18,67 +22,23 @@ export function Navbar() {
         className={showMediaIcons ? "menu-link mobile-menu-link" : "menu-link"}
       >
         <ul>
-          <li>
-            <NavLink
-              to="/"
-              className={(isActive) =>
-                `${isActive.isActive ? "isActiveNav" : ""} navLink`
-              }
-              state="Passing data using react router dom"
-            >
-              Home
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/form"
-              className={(isActive) =>
-                `${isActive.isActive ? "isActiveNav" : ""} navLink`
-              }
-            >
-              Form
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/checkboxTry"
-              className={(isActive) =>
-                `${isActive.isActive ? "isActiveNav" : ""} navLink`
-              }
-            >
-              Checkbox Try
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/stopwatch"
-              className={(isActive) =>
-                `${isActive.isActive ? "isActiveNav" : ""} navLink`
-              }
-            >
-              Stopwatch
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/todoList"
-              className={(isActive) =>
-                `${isActive.isActive ? "isActiveNav" : ""} navLink`
-              }
-            >
-              Todo List
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/accordion"
-              className={(isActive) =>
-                `${isActive.isActive ? "isActiveNav" : ""} navLink`
-              }
-            >
-              Accordion
-            </NavLink>
-          </li>
+          {NavList.map((list, index) => {
+            const { path, navName, routeState } = list;
+            console.log({routeState});
+            return (
+              <li key={index}>
+                <NavLink
+                  to={path}
+                  state={{ routeState }}
+                  className={(isActive) =>
+                    `${isActive.isActive ? "isActiveNav" : ""} navLink`
+                  }
+                >
+                  {navName}
+                </NavLink>
+              </li>
+            );
+          })}
           {showMediaIcons ? (
             <li className="mobile-social-link">
               <div className="mobile-social-link-div">
@@ -131,9 +91,7 @@ export function Navbar() {
             className={`hamburger-menu-icon ${
               showMediaIcons ? "hamburger-menu-icon-rotate" : ""
             }`}
-            onClick={() => {
-              setShowMediaIcons(!showMediaIcons);
-            }}
+            onClick={handleShowMedia}
           />
         </div>
       </div>
