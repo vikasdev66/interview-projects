@@ -9,5 +9,9 @@ export const NavList = [
   { path: "/stopwatch", navName: "Stopwatch", routeState: null },
   { path: "/todoList", navName: "TodoList", routeState: null },
   { path: "/accordion", navName: "Accordion", routeState: null },
-  { path: "/fileStructure", navName: "File Structure", routeState: null },
+  {
+    path: "/folder-file-explorer",
+    navName: "Folder/File Explorer",
+    routeState: null,
+  },
 ];

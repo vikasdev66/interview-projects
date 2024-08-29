@@ -1,15 +1,15 @@
 import React from "react";
-import { useFileStructure } from "./useFileStructure";
+import { useFolderFileExplorer } from "./useFolderFileExplorer";
 import { SkeletonDirectory } from "./components/SkeletonDirectory";
-import "./FileStructure.css";
+import "./FolderFileExplorer.css";
 
-export const FileStructure = () => {
+export const FolderFileExplorer = () => {
   const { fileStructure, isFolderOpen, setIsFolderOpen, handleClick } =
-    useFileStructure();
+    useFolderFileExplorer();
   return (
     <div className="main-container">
       <div className="container">
-        <h1 className="text-center">File Structure</h1>
+        <h1 className="text-center">Folder/File Explorer</h1>
         <SkeletonDirectory
           fileStructure={fileStructure.root}
           index={0}

@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { FileStructureData } from "./FileStructureData";
+import { FolderFileExplorerData } from "./FolderFileExplorerData";
 
-export const useFileStructure = () => {
+export const useFolderFileExplorer = () => {
   const [isFolderOpen, setIsFolderOpen] = useState({});
-  const [fileStructure, setFileStructure] = useState(FileStructureData);
+  const [fileStructure, setFileStructure] = useState(FolderFileExplorerData);
   const handleClick = (e, type, name) => {
     e.stopPropagation();
     if (type === "folder") {

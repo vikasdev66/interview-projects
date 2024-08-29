@@ -1,4 +1,4 @@
-export const FileStructureData = {
+export const FolderFileExplorerData = {
   root: {
     name: "my-react-app",
     type: "folder",
