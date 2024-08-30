@@ -13,13 +13,7 @@ export const InfiniteScroll = () => {
           {photos.map((photo, index) => {
             const { src, alt } = photo;
             return (
-              <img
-                key={index}
-                src={src.landscape}
-                alt={alt}
-                loading="lazy"
-                // className="infinite-scroll-img"
-              />
+              <img key={index} src={src.landscape} alt={alt} loading="lazy" />
             );
           })}
           {loading ? <Loading /> : ""}
