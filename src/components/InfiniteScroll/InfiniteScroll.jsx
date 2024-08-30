@@ -18,7 +18,7 @@ export const InfiniteScroll = () => {
                 src={src.landscape}
                 alt={alt}
                 loading="lazy"
-                className="infinite-scroll-img"
+                // className="infinite-scroll-img"
               />
             );
           })}

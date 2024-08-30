@@ -1,8 +1,12 @@
-.infinite-scroll-container{
-    height: 60vh;
-    overflow: scroll;
+.infinite-scroll-container {
+  height: 60vh;
+  padding: 0 10px 10px 10px;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.infinite-scroll-img{
+/* .infinite-scroll-img{
     margin: 0 10px 10px 10px;
-}
+} */
