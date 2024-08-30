@@ -22,7 +22,6 @@ export const useInfiniteScroll = () => {
   };
   useEffect(() => {
     const handleScroll = (e) => {
-      console.log(e.target.scrollTop);
       setLoading(true);
       setPageCount((prev) => prev + 1);
     };
