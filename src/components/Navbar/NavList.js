@@ -14,4 +14,9 @@ export const NavList = [
     navName: "Folder/File Explorer",
     routeState: null,
   },
+  {
+    path: "/infinite-scroll",
+    navName: "Infinite Scroll",
+    routeState: null,
+  },
 ];

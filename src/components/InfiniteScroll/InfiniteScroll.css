@@ -1,0 +1,8 @@
+.infinite-scroll-container{
+    height: 60vh;
+    overflow: scroll;
+}
+
+.infinite-scroll-img{
+    margin: 0 10px 10px 10px;
+}

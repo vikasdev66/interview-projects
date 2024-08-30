@@ -6,3 +6,5 @@ export { Home } from "./Home/Home";
 export { TodoList } from "./TodoList/TodoList";
 export { Accordion } from "./Accordion/Accordion";
 export { FolderFileExplorer } from "./FolderFileExplorer/FolderFileExplorer";
+export { InfiniteScroll } from "./InfiniteScroll/InfiniteScroll";
+export { Loading } from "./Loading/Loading";
