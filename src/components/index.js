@@ -8,3 +8,5 @@ export { Accordion } from "./Accordion/Accordion";
 export { FolderFileExplorer } from "./FolderFileExplorer/FolderFileExplorer";
 export { InfiniteScroll } from "./InfiniteScroll/InfiniteScroll";
 export { Loading } from "./Loading/Loading";
+export { ProgressStep } from "./ProgressStep/ProgressStep";
+export { ProgressStepUse } from "./ProgressStep/ProgressStepUse";

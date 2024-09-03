@@ -7,6 +7,7 @@ import {
   Accordion,
   FolderFileExplorer,
   InfiniteScroll,
+  ProgressStepUse,
 } from "./components/index";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Layout from "./Layout";
@@ -25,6 +26,7 @@ const router = createBrowserRouter([
       { path: "/accordion", element: <Accordion /> },
       { path: "/folder-file-explorer", element: <FolderFileExplorer /> },
       { path: "/infinite-scroll", element: <InfiniteScroll /> },
+      { path: "/progress-step", element: <ProgressStepUse /> },
     ],
   },
 ]);

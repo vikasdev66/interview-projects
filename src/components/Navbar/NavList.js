@@ -19,4 +19,9 @@ export const NavList = [
     navName: "Infinite Scroll",
     routeState: null,
   },
+  {
+    path: "/progress-step",
+    navName: "Progress Step",
+    routeState: null,
+  },
 ];
