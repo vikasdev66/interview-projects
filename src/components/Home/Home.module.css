@@ -1,0 +1,66 @@
+.homeContainer {
+  padding: 10px 10px 10px 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  width: 100%;
+  justify-items: center;
+}
+
+.homeDesc {
+  width: 300px;
+  height: 320px;
+  text-align: justify;
+  overflow: hidden;
+}
+
+.homeProjectCard {
+  width: 300px;
+  border-radius: 15px;
+  box-shadow: 10px 7px 12px 3px rgba(108, 107, 114, 0.52);
+  padding: 10px;
+}
+
+.homeProjectCardImg {
+  width: 300px;
+  height: 200px;
+  object-fit: fill;
+}
+
+.cardButton {
+  background-color: #5584b2;
+  color: whitesmoke;
+  width: 120px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+}
+
+.cardButton:hover {
+  background-color: #437ab1;
+  color: white;
+}
+
+.cardGitIcon {
+  width: 25px;
+  height: 25px;
+  border-radius: 5px;
+}
+
+@media (max-width: 1262px) {
+  .homeContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 970px) {
+  .homeContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 652px) {
+  .homeContainer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

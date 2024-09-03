@@ -98,7 +98,7 @@ li {
   cursor: pointer;
 }
 
-@media (max-width: 998px) {
+/* @media (max-width: 998px) {
   .menu-link,
   .social-media {
     display: none;
@@ -141,4 +141,4 @@ li {
     flex-direction: column;
     align-items: start;
   }
-}
+} */

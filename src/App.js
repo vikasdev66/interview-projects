@@ -20,7 +20,7 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <Home /> },
       { path: "/form", element: <FormTry /> },
-      { path: "/checkboxTry", element: <CheckboxTry /> },
+      { path: "/checkbox", element: <CheckboxTry /> },
       { path: "/stopwatch", element: <Stopwatch /> },
       { path: "/todoList", element: <TodoList /> },
       { path: "/accordion", element: <Accordion /> },

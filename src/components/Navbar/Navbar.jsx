@@ -1,16 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import { FaGithubSquare } from "react-icons/fa";
-import { GiHamburgerMenu } from "react-icons/gi";
+// import { GiHamburgerMenu } from "react-icons/gi";
 import { RiNotionFill } from "react-icons/ri";
-import { NavLink, Link } from "react-router-dom";
-import { NavList } from "./NavList";
+import { Link } from "react-router-dom";
+// import { NavList } from "./NavList";
 import "./Navbar.css";
 
 export function Navbar() {
-  const [showMediaIcons, setShowMediaIcons] = useState(false);
-  const handleShowMedia = () => {
-    setShowMediaIcons(!showMediaIcons);
-  };
+  // const [showMediaIcons, setShowMediaIcons] = useState(false);
+  // const handleShowMedia = () => {
+  //   setShowMediaIcons(!showMediaIcons);
+  // };
   return (
     <nav className="main-nav">
       <div className="logo">
@@ -18,7 +18,7 @@ export function Navbar() {
           <h2>React Interview Projects</h2>
         </Link>
       </div>
-      <div
+      {/* <div
         className={showMediaIcons ? "menu-link mobile-menu-link" : "menu-link"}
       >
         <ul>
@@ -62,7 +62,7 @@ export function Navbar() {
             ""
           )}
         </ul>
-      </div>
+      </div> */}
       <div className="social-media">
         <ul className="social-media-desktop gap-4">
           <li>
@@ -85,7 +85,7 @@ export function Navbar() {
           </li>
         </ul>
       </div>
-      <div className="hamburger-menu">
+      {/* <div className="hamburger-menu">
         <div className="hamburger-menu-container">
           <GiHamburgerMenu
             className={`hamburger-menu-icon ${
@@ -94,7 +94,7 @@ export function Navbar() {
             onClick={handleShowMedia}
           />
         </div>
-      </div>
+      </div> */}
     </nav>
   );
 }
