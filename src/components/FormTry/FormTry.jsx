@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./FormTry.css"
+import "./FormTry.css";
 
 export function FormTry() {
   const [formData, setFormData] = useState({

@@ -20,6 +20,7 @@ export const ProgressStepUse = () => {
   return (
     <div className="main-container">
       <div className="container">
+      <header>Progress Step</header>
         <div>
           <ProgressStep steps={steps} currentStep={currentStep} />
           <div className="Button-group flex gap-5 justify-center">
