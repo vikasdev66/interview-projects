@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   Home,
   FormTry,
@@ -9,6 +10,7 @@ import {
   InfiniteScroll,
   ProgressStepUse,
 } from "./components/index";
+import { ProjectListContext } from "./context/ProjectListContext";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Layout from "./Layout";
 import "./App.css";
@@ -32,10 +34,15 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
+  const [projectListData, setProjectListData] = useState([]);
   return (
-    <div className="app-container">
-      <RouterProvider router={router} />
-    </div>
+    <ProjectListContext.Provider
+      value={{ projectListData, setProjectListData }}
+    >
+      <div className="app-container">
+        <RouterProvider router={router} />
+      </div>
+    </ProjectListContext.Provider>
   );
 }
 

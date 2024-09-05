@@ -1,11 +1,11 @@
-import form from "../../Assets/form.png";
-import checkbox from "../../Assets/checkbox.png";
-import stopwatch from "../../Assets/stopwatch.png";
-import todo from "../../Assets/todo.png";
-import accordion from "../../Assets/accordion.png";
-import folderFileExplorer from "../../Assets/folderFileExplorer.png";
-import infiniteScroll from "../../Assets/infiniteScroll.png";
-import progressStep from "../../Assets/progressStep.png";
+import form from "Assets/form.png";
+import checkbox from "Assets/checkbox.png";
+import stopwatch from "Assets/stopwatch.png";
+import todo from "Assets/todo.png";
+import accordion from "Assets/accordion.png";
+import folderFileExplorer from "Assets/folderFileExplorer.png";
+import infiniteScroll from "Assets/infiniteScroll.png";
+import progressStep from "Assets/progressStep.png";
 
 export const ProjectList = [
   {

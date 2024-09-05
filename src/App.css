@@ -1,11 +1,21 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap"); */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/* @import url("https://fonts.googleapis.com/css2?family=Anton&display=swap"); */
+
+:root {
+  --tw-bg-opacity: 1;
+  --nav-blue-bg: rgb(57 109 255 / var(--tw-bg-opacity));
+  --container-off-blue-bg: #f1f5ff;
+  --nav-text-white: #ffffff;
+}
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
+  /* font-family: "Anton", sans-serif;
+  font-style: normal; */
 }
 
 body {
@@ -25,7 +35,7 @@ body {
   transform: rotate(45deg);
 }
 
-.main-container{
+.main-container {
   position: relative;
   top: 10rem;
   z-index: 0;
@@ -33,7 +43,7 @@ body {
   display: flex;
   justify-content: center;
   padding-left: 15px;
-  padding-right: 15px ;
+  padding-right: 15px;
   right: 10px;
 }
 
